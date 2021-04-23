@@ -17,13 +17,14 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\CartController::class, 'shop'])->name('home');
-Route::get('/', 'CartController@shop')->name('shop');
+Route::get('/', 'HomeController@index')->name('shop');
 
 //cart related routes
 Route::get('add-to-cart/{product}','CartController@add')->name('add.cart');
 Route::get('/cart', 'CartController@cart')->name('cart.index');
 Route::post('/update', 'CartController@update')->name('cart.update');
 Route::post('/remove', 'CartController@remove')->name('cart.remove');
+Route::post('/clear', 'CartController@clear')->name('cart.clear');
 Route::post('/clear', 'CartController@clear')->name('cart.clear');
 
 //checkout routes
@@ -95,5 +96,9 @@ Route::get('women','Fashion@women')->name('women');
 Route::get('Dress','Fashion@Dress')->name('Dress');
 Route::get('Jeans','Fashion@Jeans')->name('Jeans');
 Route::get('Skirt','Fashion@Skirt')->name('Skirt');
+
+
+Route::get('users', 'UserController@index');
+Route::get('changeStatus', 'UserController@ChangeUserStatus');
 
 
