@@ -29,4 +29,8 @@ class HomeController extends Controller
     {
         return view('cart.Shopping_cart');
     }
+    public function Oders()
+    {
+        return view('Backend.Shops.Oders');
+    }
 }

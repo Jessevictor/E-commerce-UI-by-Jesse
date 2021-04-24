@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\CartController::class, 'shop'])->name('home');
 Route::get('/', 'HomeController@index')->name('shop');
+Route::get('Oders', 'HomeController@Oders')->name('Oders');
 
 //cart related routes
 Route::get('add-to-cart/{product}','CartController@add')->name('add.cart');

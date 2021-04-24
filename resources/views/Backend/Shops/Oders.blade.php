@@ -1,76 +1,111 @@
+
 @include('Backend.Shops.navbar')
-        <!-- Begin Page Content -->
-        <div class="container-fluid px-lg-4">
-        <div class="row">
-          <div class="col-md-12 mt-lg-4 mt-4">
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800"></h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>
-			Generate Report</a>
-          </div>
-		  </div>
-<div class="col-md-12">
-       <div class="row">
-						<div class="col-sm-3">
-							<div class="card one" style="background-color: #ffb300">
-											<div class="card-body" >
-												<h6 class="card-title mb-4">
-                                                    <i class="fa fa-users fa-3x" aria-hidden="true"></i> Total Visitors</h6>
-												<h1 class="display-5 mt-1 mb-3">2.382</h1>
-												<div class="mb-1">
-													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-													<span class="text-muted">Since last week</span>
-												</div>
-											</div>
-										</div>
 
-									</div>
-									<div class="col-sm-3">
-										<div class="card" style="background-color: #bfeb4788">
-											<div class="card-body" >
-												<h6 class="card-title mb-4"><i class="fa fa-user-plus fa-3x" aria-hidden="true"></i> New Signups</h6>
-												<h1 class="display-5 mt-1 mb-3">2.382</h1>
-												<div class="mb-1">
-													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-													<span class="text-muted">Since last week</span>
-												</div>
-											</div>
-										</div>
-
-									</div>
-									<div class="col-sm-3">
-										<div class="card" style="background-color: #2a4fe288">
-											<div class="card-body">
-												<h6 class="card-title mb-4"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i> Email Enquiries</h6>
-												<h1 class="display-5 mt-1 mb-3">2.382</h1>
-												<div class="mb-1">
-													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-													<span class="text-muted">Since last week</span>
-												</div>
-											</div>
-										</div>
-
-									</div>
-									<div class="col-sm-3">
-										<div class="card" style="background-color: #e9383888; ">
-											<div class="card-body">
-												<h6 class="card-title mb-4"><i class="fa fa-cart-arrow-down fa-3x" aria-hidden="true"></i> <b>Orders</b> </h6>
-												<h1 class="display-5 mt-1 mb-3">4500</h1>
-												<div class="mb-1">
-													<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
-													<span class="text-muted">Since last week</span>
-												</div>
-											</div>
-										</div>
-
-									</div>
+<style>
+    /*---------------------------------
+main-table
+----------------------*/
 
 
-								</div>
-</div>
+ .m-r-10 {
+    margin-right: 10px;
+}
+.btn-circle {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
 
-                    <!-- column -->
+.btn-info {
+    color: #fff;
+    background-color: #2962FF;
+    border-color: #2962FF;
+}
+
+.btn-orange {
+    color: #212529;
+    background-color: #fb8c00;
+    border-color: #fb8c00;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #36bea6;
+    border-color: #36bea6;
+}
+.btn-purple {
+    color: #fff;
+    background-color: #7460ee;
+    border-color: #7460ee;
+}
+
+.card .card-title {
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.card .card-subtitle {
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #a1aab2;
+	  margin-top: -0.375rem;
+}
+
+
+.table td, .table th {
+    padding: 1rem;
+	font-size:14px;
+	color:#333;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table h5{
+      font-size: 16px;
+	  font-weight:600;
+	  color:#585858;
+}
+
+
+
+/*---------------------------------
+main-table
+----------------------*/
+
+
+
+
+/*---------------------------------
+ footer
+----------------------*/
+
+footer.footer {
+    padding: 1rem .875rem;
+    direction: ltr;
+    background: #fff;
+}
+
+footer.footer ul {
+    margin:0px;
+	list-style:none;
+}
+
+.footer ul  li{
+ display:inline-block;
+ margin:0px 7px;
+}
+
+.text-muted {
+    color: #6c757d!important;
+	font-size:14px;
+}
+
+</style>
+
+                  <!-- column -->
 
                     <div class="col-md-12 mt-4">
                         <div class="card">
@@ -78,25 +113,10 @@
                                 <!-- title -->
                                 <div class="d-md-flex align-items-center">
                                     <div>
-                                        <h4 class="card-title">My Store</h4>
-                                        <h5 class="card-subtitle">ALL PRODUCTS</h5>
+                                        <h6>Oders</h6>
                                     </div>
-                                    {{-- <div class="ml-auto">
-                                        <div class="dl">
-                                            <select class="custom-select">
-                                                <option value="0" selected="">Monthly</option>
-                                                <option value="1">Daily</option>
-                                                <option value="2">Weekly</option>
-                                                <option value="3">Yearly</option>
-                                            </select>
-                                        </div>
-                                    </div> --}}
+
                                 </div>
-                                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                    {{-- <h1 class="h3 mb-0 text-gray-800"></h1> --}}
-                                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i>
-                                    Add Product</a>
-                                  </div>
                                 <!-- title -->
                             </div>
                             <div class="table-responsive">
@@ -147,7 +167,7 @@
                                                 <label class="label label-danger">450</label>
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-success btn-sm active" tabindex="-1" role="button" aria-disabled="true">Active</a>
+                                                <a href="#" class="btn btn-success btn-sm" tabindex="-1" role="button" aria-disabled="true">Active</a>
                                             </td>
                                             <td>
                                                 <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
@@ -168,7 +188,7 @@
                                                 <label class="label label-danger">450</label>
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-primary btn-sm active" tabindex="-1" role="button" aria-disabled="true">pending...</a>
+                                                <a href="#" class="btn btn-primary btn-sm" tabindex="-1" role="button" aria-disabled="true">pending...</a>
                                             </td>
                                             <td>
                                                 <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
@@ -189,7 +209,7 @@
                                                 <label class="label label-danger">450</label>
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-danger btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">inActive</a>
+                                                <a href="#" class="btn btn-danger btn-sm" tabindex="-1" role="button" aria-disabled="true">inActive</a>
                                             </td>
                                             <td>
                                                 <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
@@ -203,10 +223,3 @@
                             </div>
                         </div>
                     </div>
-
-        </div>
-		</div>
-        <!-- /#page-content-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
