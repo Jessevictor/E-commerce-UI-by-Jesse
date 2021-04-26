@@ -244,7 +244,7 @@ button:active {
                <div class="row g-2">
                    <br>
                    <div class="col-md-3 mb-4">
-                    <div class="card">
+                    <div class="card-product">
                         <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/07/472982/1.jpg?1801" alt="" />
                         <div class="card-body">
                             <p class="h6"><small class="text-muted">xiaomi redmi 9t</small></p>

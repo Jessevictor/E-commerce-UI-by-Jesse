@@ -1,13 +1,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.3">
+    <link rel="stylesheet" media="screen and (min-width: 300px)" href="widescreen.css">
+     <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
     <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> --}}
+  </head>
+    <link rel="stylesheet" href="your-stylesheet.css"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="restive.min.js"></script>
 </head>
+<style>
+.r_mobi #my-element-1 {color: #ff0000;}
+</style>
 <body>
 <div class="row mb-4">
     <div class="col-md-8">
-       <a href="{{route('')}}">SELL</a>
+       <a href=""></a>
     </div>
     <div class="col-md-1">
     </div>
@@ -21,9 +36,10 @@
 <!--Section: Block Content-->
 <section>
     <!--Carousel Wrapper-->
+
     <div class="container-fluid float-left">
-        <div class="row mb-5">
-            @include('mengamenu')
+    <div class="row mb-5">
+        @include('mengamenu')
             <div class="col-md-9 float-center">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -61,6 +77,7 @@
             </div>
         </div>
     </div>
+
     <!--/Carousel Wrapper-->
 
   <!--Section: Block Content-->
@@ -79,12 +96,19 @@
 
     @include('product.Details_view')
     <br>
+    {{-- @include('product.product-details') --}}
     @include('body.footer')
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
 </section>
   </body>
 </html>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+              $('body').restive(options);
+        });
+  </script>

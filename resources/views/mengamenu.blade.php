@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <style>
     .menu-container {
     width:200%;
@@ -109,7 +110,13 @@
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-outs;
 }
+@media screen and (max-width: 1400px) {
+  div.Size {
+    display: none;
+  }
+}
 </style>
+<div class="Size">
 <div class="col-sm-3">
     <div>
         <ul class="menu">
@@ -251,6 +258,8 @@
               </div>
             </div>
           </li>
+
+
           {{-- <li><a href="#">MEGA MENU 1</a>
 
             <div class="megadrop">
@@ -831,3 +840,5 @@
         </ul>
       </div>
 </div>
+</div>
+

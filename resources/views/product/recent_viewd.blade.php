@@ -105,6 +105,18 @@ button:active {
    justify-content: center;
    color: #fff
 }
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .container {
+    width: 50%;
+  }
+}
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 200px) {
+  .container {
+    width: 100%;
+  }
+}
 </style>
 
 @extends('layouts.app')
