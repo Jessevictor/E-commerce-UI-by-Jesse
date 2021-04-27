@@ -7,14 +7,13 @@
     padding: 20px 0;
 }
 .menu {
-    width: 300px;
-    font-family: Verdana, Geneva, sans-serif;
+    width: 325px;
     font-weight: 300;
     font-size: 13px;
     line-height: 12px;
     position: relative;
     padding: 0 0 0 0px;
-    margin: 0;
+    margin: 2%;
     background-color: rgb(255, 254, 253);
     height: 350px;
 }
@@ -49,11 +48,11 @@
     position: absolute;
     list-style: none;
     top: 0px;
-    left: 310px;
-    width: 800px;
+    left: 350px;
+    width: 910px;
     min-height: 100%;
     text-align: left;
-    margin-top:30px;
+    margin-top:33px;
     padding: 0;
     z-index: 99;
     border-bottom-left-radius: 5px;
@@ -74,7 +73,7 @@
 .menu .col {
     width: 25.1%;
     float: left;
-    color:white;
+    color:rgb(248, 242, 242);
     margin: 0 0 0 2.2%;
 }
 .menu .col ul {
@@ -110,7 +109,7 @@
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-outs;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
   div.Size {
     display: none;
   }

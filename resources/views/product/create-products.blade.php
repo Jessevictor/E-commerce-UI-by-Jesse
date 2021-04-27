@@ -18,7 +18,7 @@
             {{ session()->get('success') }}
         </div>
     @endif
-
+    
     <form method="post" action="{{ route('product.store') }}" enctype="multipart/form-data">
       @csrf
       <div class="row">

@@ -3,14 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap All in One Navbar</title>
+<title>Shopii</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+{{-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>--}}
 <style>
 body {
 	background: #eeeeee;
@@ -84,7 +83,7 @@ body {
 	box-shadow: 0 2px 8px rgba(0,0,0,.05);
 }
 .navbar .dropdown-menu a {
-	color: #777;
+	color: rgb(161, 159, 159);
 	padding: 8px 20px;
 	line-height: normal;
 }
@@ -99,7 +98,7 @@ body {
 }
 .navbar .badge {
 	color: #fff;
-	background: #f44336;
+	background: #ec2213;
 	font-size: 11px;
 	border-radius: 20px;
 	position: absolute;
@@ -138,47 +137,29 @@ body {
 	.input-group {
 		width: 100%;
 	}
+
+
 }
 </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-xl sticky-top navbar-light bg-warnig">
-	<a href="#" class="navbar-brand"> <img src="/images/logo-removebg-preview (1).png"  width="100px;" height="100px" alt=""> Brand<b>Name</b></a>
+<nav class="navbar navbar-expand-xl sticky-top navbar-light bg-warning">
+	<a href="/" class="navbar-brand"> <img src="/images/i.png"  width="60px;" height="60px" alt="">Brand<b>Name</b></a>
 	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<!-- Collection of nav links, forms, and other content for toggling -->
 	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-		<div class="navbar-nav">
-			<a href="#" class="nav-item nav-link active">Home</a>
-			<a href="#" class="nav-item nav-link">About</a>
-			<div class="nav-item dropdown">
-				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
-				<div class="dropdown-menu">
-					<a href="{{route('phonestablets')}}" class="dropdown-item">Phone & Tablets</a>
-					<a href="#" class="dropdown-item">Web Development</a>
-					<a href="#" class="dropdown-item">Graphic Design</a>
-					<a href="#" class="dropdown-item">Digital Marketing</a>
-                    <a href="#" class="dropdown-item">Graphic Design</a>
-					<a href="#" class="dropdown-item">Digital Marketing</a>
-                    <a href="#" class="dropdown-item">Graphic Design</a>
-					<a href="#" class="dropdown-item">Digital Marketing</a>
-                    <a href="#" class="dropdown-item">Graphic Design</a>
-					<a href="#" class="dropdown-item">Digital Marketing</a>
-                    <a href="#" class="dropdown-item">Graphic Design</a>
-					<a href="#" class="dropdown-item">Digital Marketing</a>
-                    <a href="#" class="dropdown-item">Graphic Design</a>
-				</div>
-			</div>
-		</div>
-		<form class="navbar-form form-inline">
-			<div class="input-group search-box">
-				<input type="text" id="search" class="form-control" placeholder="Search by Name">
-				<span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
-			</div>
-		</form>
+		{{-- <div class="navbar-nav">
+			<a href="" class="nav-item nav-link">Add prodcut</a>
+		</div> --}}
+        <form class="navbar-form form-inline">
+            <div class=" search-box ml-5" >
+                <input type="text" id="search" class="form-control" style="width:290%" placeholder="Search Product by Name">
+            </div>
+        </form>
 		<div class="navbar-nav ml-auto">
-			<a href="#" class="nav-item nav-link notifications"><i class="fa fa-cart-arrow-down" style="font-size: 2em;"></i><span class="badge">1</span></a>
+			<a href="{{route('cart.index')}}" class="nav-item nav-link notifications"><i class="fa fa-cart-arrow-down" style="font-size: 2em;"></i><span class="badge">{{\Cart::getContent()->count()}}</span></a>
 			<div class="nav-item dropdown">
                                 <!-- Authentication Links -->
                                 @guest
@@ -196,9 +177,9 @@ body {
                             @else
 				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://www.shareicon.net/data/512x512/2016/07/26/802043_man_512x512.png" class="avatar" alt="Avatar"> {{ Auth::user()->name }} <b class="caret"></b></a>
 				<div class="dropdown-menu">
-					<a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></a>
-					<a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></a>
-					<a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></a>
+					<a href="#" class="dropdown-item"><i class="fa fa-user-o"></i>Orders</a></a>
+					{{-- <a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></a> --}}
+					{{-- <a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> </a></a> --}}
 					<div class="dropdown-divider"></div>
 					<a href="{{ route('logout') }}"
                     onclick="event.preventDefault();

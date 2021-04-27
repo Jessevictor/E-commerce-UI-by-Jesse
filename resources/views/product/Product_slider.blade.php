@@ -24,7 +24,7 @@ if (idx >= totalItems-(itemsPerSlide-1)) {
 </script>
 <div class="row mb-5">
     <div class="col-md-12">
-        <div class="card">
+        <div class="card-1">
             <div class="card-header" style="background-color:rgb(225, 223, 223);">
                 <div class="row mb-0">
                     <div class="col-md-11">
@@ -42,51 +42,51 @@ if (idx >= totalItems-(itemsPerSlide-1)) {
             <div class="carousel-item col-md-3 active">
                 <div class="card">
                     <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
-                    <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
-                    <p class="h5 m-1"> $782.00</p>
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
                 </div>
              </div>
             <div class="carousel-item col-md-3">
                 <div class="card">
                     <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
-                    <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
-                    <p class="h5 m-1"> $782.00</p>
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
                 </div>            </div>
             <div class="carousel-item col-md-3">
                 <div class="card">
                     <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
-                    <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
-                    <p class="h5 m-1"> $782.00</p>
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
                 </div>            </div>
             <div class="carousel-item col-md-3">
                 <div class="card">
                     <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
-                    <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
-                    <p class="h5 m-1"> $782.00</p>
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
                 </div>            </div>
             <div class="carousel-item col-md-3">
                 <div class="card">
                     <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
-                    <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
-                    <p class="h5 m-1"> $782.00</p>
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
                 </div>            </div>
             <div class="carousel-item col-md-3">
                 <div class="card">
                     <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
-                    <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
-                    <p class="h5 m-1"> $782.00</p>
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
                 </div>            </div>
             <div class="carousel-item col-md-3">
                 <div class="card">
                     <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
-                    <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
-                    <p class="h5 m-1"> $782.00</p>
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
                 </div>            </div>
             <div class="carousel-item col-md-3">
                 <div class="card">
                     <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
-                    <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
-                    <p class="h5 m-1"> $782.00</p>
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
                 </div>            </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">

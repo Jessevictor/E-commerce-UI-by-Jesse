@@ -17,12 +17,20 @@
     <script type="text/javascript" src="restive.min.js"></script>
 </head>
 <style>
-.r_mobi #my-element-1 {color: #ff0000;}
+@media screen and (max-width: -900px) {
+  div.example {
+    width: 120%;
+  }
+  div.example {
+  width:50%;
+}
+}
 </style>
 <body>
+
 <div class="row mb-4">
     <div class="col-md-8">
-       <a href=""></a>
+        <a href='https://pngtree.com/so/ramadan-kareem'></a>
     </div>
     <div class="col-md-1">
     </div>
@@ -36,68 +44,68 @@
 <!--Section: Block Content-->
 <section>
     <!--Carousel Wrapper-->
+    <div class="container-fluid">
+                <div class="row mb-5">
+                    @include('mengamenu')
+                    <div class="col-md-8 example">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://ke.jumia.is/cms/2021/W16/KE_JAS_RB_S.jpg" class="d-block w-100" height="350px" alt="" />
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://ke.jumia.is/cms/2021/W16/CP/KE_Cross_BrandsWk_Generic_0421_S.jpg" class="d-block w-100" height="350px"  alt="" />
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://ke.jumia.is/cms/2021/SubCampaigns/W16/Fashion/KE_Phones_BrandWk_Nokia_0421_S.jpg" class="d-block w-100" height="350px"  alt="" />
+                                    <div class="carousel-caption d-none d-md-block">
 
-    <div class="container-fluid float-left">
-    <div class="row mb-5">
-        @include('mengamenu')
-            <div class="col-md-9 float-center">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://ke.jumia.is/cms/2021/W16/KE_JAS_RB_S.jpg" class="d-block w-100" height="350px" alt="" />
-                        <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://ke.jumia.is/cms/2021/W16/CP/KE_Cross_BrandsWk_Generic_0421_S.jpg" class="d-block w-100" height="350px"  alt="" />
-                        <div class="carousel-caption d-none d-md-block">
-                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://ke.jumia.is/cms/2021/SubCampaigns/W16/Fashion/KE_Phones_BrandWk_Nokia_0421_S.jpg" class="d-block w-100" height="350px"  alt="" />
-                        <div class="carousel-caption d-none d-md-block">
 
-                        </div>
-                    </div>
+
+                <!--/Carousel Wrapper-->
+
+            <!--Section: Block Content-->
+
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                @include('product.product_view')
+
+                @include('product.product_category')
+
+                @include('product.Best_products')
+                @include('product.Product_layout1')
+                <br>
+                @include('product.Product_layout2')
+                @include('product.product_layout3')
+                @include('product.product_layout4')
+
+                @include('product.Details_view')
+                <br>
             </div>
-            </div>
-        </div>
-    </div>
-
-    <!--/Carousel Wrapper-->
-
-  <!--Section: Block Content-->
-
-    </div>
-    @include('product.product_view')
-
-    @include('product.product_category')
-
-    @include('product.Best_products')
-    @include('product.Product_layout1')
-    <br>
-    @include('product.Product_layout2')
-    @include('product.product_layout3')
-    @include('product.product_layout4')
-
-    @include('product.Details_view')
-    <br>
-    {{-- @include('product.product-details') --}}
     @include('body.footer')
+    {{-- @include('product.Product_slider') --}}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 

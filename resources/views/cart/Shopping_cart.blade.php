@@ -9,6 +9,17 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css" rel="stylesheet">
 
+<style>
+body{
+    background-image: url(https://www.gpstracker.at/wp-content/uploads/2019/03/How-GPS-Tracking-Can-Benefit-Delivery-Services.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+   background-image opacity: 0.1;
+}
+
+</style>
+<body>
+
 
 <div class="container">
       <br>
@@ -121,5 +132,5 @@
       </ul>
     </footer>
   </div>
-
+</body>
 

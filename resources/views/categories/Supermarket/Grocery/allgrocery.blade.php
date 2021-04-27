@@ -105,6 +105,20 @@ button:active {
    justify-content: center;
    color: #fff
 }
+@media screen and (max-width: 1400px) {
+  div.col-md-3 {
+    display: none;
+  }
+}
+.card{
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
+}
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
 </style>
 @include('layouts.app')
 <h2><b>Grocery</b></h2>
@@ -243,8 +257,8 @@ button:active {
 
                <div class="row g-2">
                    <br>
-                   <div class="col-md-3 mb-4">
-                    <div class="card-product">
+                   <div class="col-md-2 mb-4">
+                    <div class="card">
                         <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/07/472982/1.jpg?1801" alt="" />
                         <div class="card-body">
                             <p class="h6"><small class="text-muted">xiaomi redmi 9t</small></p>
@@ -255,12 +269,6 @@ button:active {
                                 <button type="button" class="btn btn-light">
                                     <i class="fa fa-cart-plus"></i>
                                     <span>Add Cart</span>
-                                </button>
-                                {{-- <button type="button" class="btn btn-light">
-                                    <i class="fa fa-shopping-cart"></i>
-                                </button> --}}
-                                <button type="button" class="btn btn-light">
-                                    <i class="fa fa-heart"></i>
                                 </button>
                             </div>
                         </div>

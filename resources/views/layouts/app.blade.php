@@ -50,8 +50,8 @@ body {
 }
 .search-box input {
 	box-shadow: none;
-	padding-right: 35px;
-	border-radius: 3px !important;
+	padding-right: 100px;
+	border-radius: 9px !important;
 }
 .search-box .input-group-addon {
 	min-width: 35px;
@@ -144,7 +144,7 @@ body {
 </head>
 <body>
 <nav class="navbar navbar-expand-xl sticky-top navbar-light bg-warning">
-	<a href="/" class="navbar-brand"> <img src="/images/i.png"  width="60px;" height="60px" alt="">Brand<b>Name</b></a>
+	<a href="/" class="navbar-brand "> <img src="/images/i.png"  width="60px;" height="60px" alt="">Mest<b>alla</b></a>
 	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 		<span class="navbar-toggler-icon"></span>
 	</button>
@@ -154,8 +154,8 @@ body {
 			<a href="" class="nav-item nav-link">Add prodcut</a>
 		</div> --}}
         <form class="navbar-form form-inline">
-            <div class=" search-box ml-5" >
-                <input type="text" id="search" class="form-control" style="width:290%" placeholder="Search Product by Name">
+            <div class=" search-box " >
+                <input type="text" id="search" class="form-control" style="width:260%" placeholder="Search Product by Name">
             </div>
         </form>
 		<div class="navbar-nav ml-auto">
@@ -172,14 +172,14 @@ body {
                                @if (Route::has('register'))
 
                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                   
+
                                 @endif
                             @else
 				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://www.shareicon.net/data/512x512/2016/07/26/802043_man_512x512.png" class="avatar" alt="Avatar"> {{ Auth::user()->name }} <b class="caret"></b></a>
 				<div class="dropdown-menu">
-					<a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></a>
-					<a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></a>
-					<a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></a>
+					<a href="#" class="dropdown-item"><i class="fa fa-user-o"></i>Oders:10</a></a>
+					{{-- <a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></a>
+					<a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></a> --}}
 					<div class="dropdown-divider"></div>
 					<a href="{{ route('logout') }}"
                     onclick="event.preventDefault();

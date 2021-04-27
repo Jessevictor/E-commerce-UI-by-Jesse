@@ -105,9 +105,12 @@ button:active {
    justify-content: center;
    color: #fff
 }
+@media screen and (max-width: 1400px) {
+  .col-md-3 {
+    display: none;
+  }
+}
 </style>
-
-
       <div class="container-fluid mt-5 mb-5">
        <h2><b>Picks for You</b></h2>
        <div class="row g-2">
@@ -127,23 +130,22 @@ button:active {
                </div>
            </div>
            <div class="col-md-9">
-
-               <div class="row g-1">
-<div class="container">
-	<div class="row mb-5">
-<div class="col-md-3 mb-4">
-    <div class="card">
-        <a href="">
-        <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/06/871813/1.jpg?6659" alt="" />
-        </a>
-        <div class="card-body">
-            <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
-            <p class="h5 m-0"> $782.00</p>
+             <div class="row g-1">
+               <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-3 mb-4">
+                     <div class="card">
+                       <a href="">
+                    <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/06/871813/1.jpg?6659" alt="" />
+                       </a>
+                    <div class="card-body">
+                        <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
+                        <p class="h5 m-0"> $782.00</p>
+                 </div>
+                </div>
+              </div>
+          </div>
+         </div>
         </div>
-    </div>
-</div>
-	</div>
- </div>
- </div>
        </div>
-   </div>
+      </div>

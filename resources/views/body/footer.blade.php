@@ -180,7 +180,7 @@
                         <i class="fa fa-phone"></i>
                         <div class="cta-text">
                             <h4>Call us</h4>
-                            <span>9876543210 0</span>
+                            <span>+254 110 063 230</span>
                         </div>
                     </div>
                 </div>
@@ -189,7 +189,7 @@
                         <i class="fa fa-envelope-open"></i>
                         <div class="cta-text">
                             <h4>Mail us</h4>
-                            <span>mail@info.com</span>
+                            <span>shopilyv@gmail.com</span>
                         </div>
                     </div>
                 </div>
