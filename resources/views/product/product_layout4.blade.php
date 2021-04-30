@@ -17,7 +17,7 @@
 }
 </style>
 {{-- Third lane --}}
-<div class="row mb-5">
+{{-- <div class="row mb-5">
     <div class="col-md-12">
         <div class="card-1">
             <div class="card-header" style="background-color: rgb(225, 223, 223);">
@@ -82,4 +82,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}

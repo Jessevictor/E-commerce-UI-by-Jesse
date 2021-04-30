@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::get('/home',[App\Http\Controllers\CartController::class,'shop'])->name('home');
-Route::get('/', 'HomeController@index')->name('shop');
+Route::get('/', 'CartController@shop')->name('shop');
 Route::get('Oders', 'HomeController@Oders')->name('Oders');
 
 //cart related routes
@@ -72,6 +72,8 @@ Route::post('admin/auth','AdminController@adminauthenticate')->name('adminauth')
 Route::get('admin/auth','AdminController@adminlogin')->name('adminauthh');
 Route::post('admin/store','AdminController@adminstore')->name('adminstore');
 Route::get('dashboard/admin','AdminController@admin')->name('admin');
+Route::get('admin/daily/orders','AdminController@daily_orders')->name('daily');
+Route::post('admin/daily/deliver/{orderid}','AdminController@deliver')->name('deliver');
 //payments
 Route::get('payment', 'MpesaController@payment')->name('payment');
 //Route::post('/oders/store', 'OrderController@store')->name('orders.store');

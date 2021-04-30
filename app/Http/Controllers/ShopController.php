@@ -23,7 +23,7 @@ class ShopController extends Controller
         $orders=Order::where('shop_id',auth()->id())->get();
         $order=count($orders);
        $ordersPerDay=Order::whereDate('created_at', Carbon::today())->get();
-        return view('Backend.Shops.index',compact('ordersPerDay','orders','order'));
+        return view('Backend.Shops.index',compact(['ordersPerDay','orders','order']));
         //
     }
     public function updateo($itemid){
@@ -180,7 +180,7 @@ class ShopController extends Controller
                 return redirect()->route('dashboard')->with('success', 'Great! welcome to your shop '.$name);
             }
            return redirect()->route('shops.login')->with('error', 'Oppes! You have entered invalid credentials');
-        
+
         }
      }
 

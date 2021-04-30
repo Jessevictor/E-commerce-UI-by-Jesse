@@ -134,15 +134,17 @@ button:active {
                <div class="row g-1">
 <div class="container">
 	<div class="row mb-5">
-        @foreach ($category->take(8) as $subcat)
+        @foreach ($category->take(4) as $subcat)
 <div class="col-md-3 mb-4">
     <div class="card">
         <a href="{{route('home.slug',$subcat->slug)}}">
         <img class="card-img-top" src="{{ asset('/images/'.$subcat->image_path) }}" alt="" />
         </a>
         <div class="card-body">
-            <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
-            <p class="h5 m-0"> $782.00</p>
+            <p class="h6"><small class="text-muted"><b style="color: black;">Butterflies Hand composite</b> </small></p>
+            <p class="h5 m-0"> Ksh782.00</p>
+            <p class="h5 m-1" style="font-size: 17px; color:grey;"><s>Ksh782.00</s></p>
+
         </div>
     </div>
 </div>

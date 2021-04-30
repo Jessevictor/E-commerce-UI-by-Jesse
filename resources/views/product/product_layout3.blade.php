@@ -1,4 +1,4 @@
-
+{{--
 <style>
 
             /* On screens that are 992px wide or less, go from four columns to two columns */
@@ -95,4 +95,4 @@
         </div>
     </div>
 </div>
-</div>
+</div> --}}

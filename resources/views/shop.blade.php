@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen and (min-width: 300px)" href="widescreen.css">
      <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
     <title>Document</title>
@@ -17,14 +17,6 @@
     <script type="text/javascript" src="restive.min.js"></script>
 </head>
 <style>
-@media screen and (max-width: -900px) {
-  div.example {
-    width: 120%;
-  }
-  div.example {
-  width:50%;
-}
-}
 </style>
 <body>
 
@@ -95,17 +87,16 @@
                 @include('product.product_category')
 
                 @include('product.Best_products')
-                @include('product.Product_layout1')
                 <br>
+                <br>
+                @include('product.Product_layout1')
                 @include('product.Product_layout2')
-                @include('product.product_layout3')
-                @include('product.product_layout4')
 
-                @include('product.Details_view')
+                {{-- @include('product.Details_view') --}}
                 <br>
             </div>
     @include('body.footer')
-    {{-- @include('product.Product_slider') --}}
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 

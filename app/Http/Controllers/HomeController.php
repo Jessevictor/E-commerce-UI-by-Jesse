@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('Backend.Shops.index');
+        return view('shop');
     }
     public function items()
     {
