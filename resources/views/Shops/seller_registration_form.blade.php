@@ -9,7 +9,7 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
          <!------ Include the above in your HEAD tag ---------->
-    <title>Become a Vendor</title>
+    <title>Register</title>
 <style>
  @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 .login-block{
@@ -39,19 +39,20 @@
  <div class="container">
 	<div class="row">
         <div class="col-md-4 login-sec">
-            <h2 class="text-center">Register Now!!</h2>
-                    <form method="POST" action="{{ route('register') }}">
+            <h2 class="text-center">Register Now</h2>
+                    <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group">
-                            <label for="exampleInputName1" class="text-uppercase">Shop Name</label>
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                                @error('name')
+                            <label for="exampleInputName1" class="text-uppercase">vendor</label>
+                                <input id="vendor" type="text" class="form-control @error('vendor') is-invalid @enderror" name="vendor" value="{{ old('vendor') }}" required autocomplete="vendor" autofocus>
+                                @error('vendor')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                        </div>  <div class="form-group">
+                        </div>
+                        <div class="form-group">
                                                     <label for="exampleInputEmail1" class="text-uppercase">Email</label>
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                                 @error('email')
@@ -59,7 +60,16 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="text-uppercase">phone</label>
+                                <input id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
+                                @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1" class="text-uppercase">Password</label>
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -69,6 +79,11 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword2" class="text-uppercase">Confirm Password</label>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                         </div>
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
@@ -84,7 +99,7 @@
                   </ol>
             <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <img class="d-block img-fluid" src="https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-yellow-app-show-background-image-image_157686.jpg" style="height: 600px" alt="First slide">
+      <img class="d-block img-fluid" src="https://blog.phonehouse.es/wp-content/uploads/2019/04/Sorteo-Mi9-blog-1.jpg" style="height: 600px" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
   </div>
     </div>

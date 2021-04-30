@@ -340,13 +340,14 @@ label.radio input:checked+span::before {
                         </div> --}}
                     </div>
                 </div>
-                <div class="card mt-2"> <span>Similar items:</span>
             </div>
         </div>
     </div>
     <br>
-    @include('product.Product_slider')
-    <br>
+    <?php
+    $data=App\Models\Product::where('category_id',$product->id)->get();
+    ?>
+    @include('product.product-related-slider')
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
     <script src='https://sachinchoolur.github.io/lightslider/dist/js/lightslider.js'></script>
     <script>

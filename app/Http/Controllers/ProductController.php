@@ -22,6 +22,11 @@ class ProductController extends Controller
         $products = Product::all();
         return view('product.product_view',compact('products'));
     }
+    public function allproducts(){
+        $allproducts=Product::get();
+
+        return view('product.allproducts',compact('allproducts'));
+    }
 
     public function productbread(){
         return view('product.product_bread');
@@ -61,13 +66,13 @@ class ProductController extends Controller
             $imagePath = $request->file('file');
             $imageName = $imagePath->getClientOriginalName();
 
-            $path = $request->file('file')->storeAs('images', $imageName, 'public');
+            $path = $request->file('file')->storeAs('upload', $imageName, 'public');
           }
 
             $product->name = $imageName;
             $product->slug=Str::random(12);
-            $product->image_path = $imageName;
-            //$product->image_path = '/storage/'.$path;
+            $product->shop_id = auth()->id();
+            $product->image_path = '/storage/'.$path;
             $product->name=$request->input('name');
             $product->price=$request->input('price');
             $product->oprice=$request->input('oprice');
@@ -77,7 +82,7 @@ class ProductController extends Controller
             $product->brand_id=$request->input('subcategory');
             $product->save();
 
-          return back()->with('success', 'Product uploaded successfully');
+          return redirect()->route('getproducts')->with('success', 'Product uploaded successfully');
 
     }
     public function getCategories()
@@ -101,7 +106,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         //
-        // $subcategory=Sub_category::with(relations:'product')->first();
+        $subcategory=Sub_category::with(relations:'product')->first();
 
         //dd($subcategory->toArray());
         return view('product.product-details')->with('product',$product);
@@ -142,13 +147,16 @@ class ProductController extends Controller
         //
     }
     public function slugg($slug){
+
+        $subcategories=Sub_category::get();
         $category=Categories::with(relations:'product')->where('slug',$slug)->first();
-        return view('categories.computing.index',compact('category'));
+        return view('categories.phoneandtablets.Phonestablets',compact(['category','subcategories']));
     }
     public function productsubcategory($slug){
-        $sproduct=sub_category::with(relations:['product'])->where('slug',$slug)->first();
+        $subcategories=Sub_category::get();
+        $sproduct=Sub_category::with(relations:['product'])->where('slug',$slug)->first();
         //dd($sproduct->toArray());
-        return view('product.product_bread',compact('sproduct'));
+        return view('categories.phoneandtablets.Tablets.Tablets.samsung_tablets',compact('sproduct'));
 
     }
 

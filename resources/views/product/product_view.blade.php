@@ -34,16 +34,30 @@ if (idx >= totalItems-(itemsPerSlide-1)) {
                     <h6>See More ></h6>
                 </div>
             </div>
-        </div>
-<div class="card-body">
-<div class="container-fluid">
-    <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
-        <div class="carousel-inner row w-75 mx-auto" role="listbox">
-            <div class="carousel-item col-md-3 active">
-                <div class="card">
-                    <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
-                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
-                    <p class="h5 m-1">Ksh 782.00</p>
+
+            <div class="card-body">
+                <div class="row">
+                    @foreach ($subcategories->take(6) as $product)
+                    <div class="col-md-2">
+                        <div class="card">
+                            <a href="{{route('product.related',$product->slug)}}">
+                                <img class="card-img-top" src="/images/{{$product->image_path}}" alt="" />
+                            </a>
+                            <p class="h6"><small class="text-muted">{{$product->subcat_name}}</small></p>
+                            <p class="h5 m-1"> {{$product->price}}</p>
+                             <form action="{{route('add.cart',$product->id)}}" method="GET">
+                            {{ csrf_field() }}
+                            <input type="hidden" value="{{ $product->id }}" id="id" name="id">
+                            <input type="hidden" value="{{ $product->name }}" id="naame" name="naame">
+                            <input type="hidden" value="{{ $product->price }}" id="price" name="price">
+                            <input type="hidden" value="{{ $product->image_path }}" id="img" name="img">
+                            <input type="hidden" value="{{ $product->slug }}" id="slug" name="slug">
+                            <input type="hidden" value="1" id="quantity" name="quantity">
+                            {{-- <button class="btn btn-primary text-uppercase">Add to cart</button> --}}
+                            </form>
+                        </div>
+                    </div>
+                    @endforeach
                 </div>
              </div>
             <div class="carousel-item col-md-3">

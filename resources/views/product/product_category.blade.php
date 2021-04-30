@@ -119,33 +119,36 @@ button:active {
                    <h6 class="text-uppercase">Top Picks for You</h6>
                    <hr>
                    <div class="p-lists">
-                       <div class="d-flex justify-content-between mt-2"> <span><a href="{{route('allgrocery')}}">Grocery</a></span> <span>23</span> </div>
-                       <div class="d-flex justify-content-between mt-2"> <span> <a href="{{route('phonestablets')}}">Phones & Tablets</a> </span> <span>46</span> </div>
-                       <div class="d-flex justify-content-between mt-2"> <span><a href="{{route('Fashion')}}">Fashion</a></span> <span>13</span> </div>
-                       <div class="d-flex justify-content-between mt-2"> <span>Furnitures</span> <span>33</span> </div>
-                       <div class="d-flex justify-content-between mt-2"> <span>Groceries</span> <span>12</span> </div>
-                       <div class="d-flex justify-content-between mt-2"> <span>Beauty</span> <span>53</span> </div>
-                       <div class="d-flex justify-content-between mt-2"> <span>Small Appliancess</span> <span>203</span> </div>
-                   </div>
+                @foreach ($category as $cat)
+                <div class="d-flex justify-content-between mt-2"> <span><a href="{{route('home.slug',$cat->slug)}}">{{$cat->cat_name}}</a></span>
+                <span>
+                    {{-- ({{App\Models\Sub_category::where('subcat_id',$cat->id)->count()}}) --}}
+                </span>
+            </div>
+                @endforeach
+                </div>
                </div>
            </div>
            <div class="col-md-9">
-             <div class="row g-1">
-               <div class="container">
-                <div class="row mb-5">
-                    <div class="col-md-3 mb-4">
-                     <div class="card">
-                       <a href="">
-                    <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/06/871813/1.jpg?6659" alt="" />
-                       </a>
-                    <div class="card-body">
-                        <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
-                        <p class="h5 m-0"> $782.00</p>
-                 </div>
-                </div>
-              </div>
-          </div>
-         </div>
+
+               <div class="row g-1">
+<div class="container">
+	<div class="row mb-5">
+        @foreach ($category->take(8) as $subcat)
+<div class="col-md-3 mb-4">
+    <div class="card">
+        <a href="{{route('home.slug',$subcat->slug)}}">
+        <img class="card-img-top" src="{{ asset('/images/'.$subcat->image_path) }}" alt="" />
+        </a>
+        <div class="card-body">
+            <p class="h6"><small class="text-muted"> Butterflies Hand composite</small></p>
+            <p class="h5 m-0"> $782.00</p>
         </div>
+    </div>
+</div>
+@endforeach
+	</div>
+ </div>
+ </div>
        </div>
       </div>

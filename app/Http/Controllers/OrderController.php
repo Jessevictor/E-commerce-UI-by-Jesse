@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
-use Illuminate\Http\Request;
-
+//use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request as Request;
 class OrderController extends Controller
 {
     /**
@@ -22,9 +23,17 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        $cartCollection = \Cart::getContent();
+        //dd($cartCollection);
+        //$data= $request->input('shipping_phone');
+        //dd($data);
+        return view('cart.Shopping_cart')->withTitle('SHOPILYV | SHOP')->with(['cartCollection' => $cartCollection]);;
+    }
+    public function pay(){
+        return view('auth.login');
     }
 
     /**
@@ -36,78 +45,77 @@ class OrderController extends Controller
     public function store(Request $request)
     {
 
-        //dd($request->all());
+          $name=$request->input('proname');
+          $image=$request->input('image');
+          //dd($nam);
         $request->validate([
             'shipping_fullname' => 'required',
-            'shipping_state' => 'required',
-            'shipping_city' => 'required',
+            // 'shipping_state' => 'required',
+            // 'shipping_city' => 'required',
             'shipping_address' => 'required',
             'shipping_phone' => 'required',
-            'shipping_zipcode' => 'required',
-            // 'payment_method' => 'required',
+            // 'shipping_zipcode' => 'required',
+            'paymentMethod' => 'required',
         ]);
 
         $order = new Order();
         $order->notes="to be delivered";
-        //$order->payment_methods="online";
-        $order->order_number = uniqid('OrderNumber-');
+        $order->payment_methods=$request->input('paymentMethod');;
+        $order->order_number = $this->randomString();
         $order->shop_id=auth()->id();
         $order->shippping_fullname = $request->input('shipping_fullname');
-        $order->shippping_state = $request->input('shipping_state');
-        $order->shippping_city = $request->input('shipping_city');
+        //$order->image_path = $request->input('shipping_state');
+        // $order->shippping_city = $request->input('shipping_city');
         $order->shippping_address = $request->input('shipping_address');
         $order->shippping_phone = $request->input('shipping_phone');
-        $order->shippping_zipcode = $request->input('shipping_zipcode');
+        // $order->shippping_zipcode = $request->input('shipping_zipcode');
         // $order->shippping_email=$request->input('shipping_email');
         // $order->notes=$request->input('notes');
 
         if(!$request->has('billing_fullname')) {
             $order->billing_fullname = $request->input('shipping_fullname');
-            $order->billing_state = $request->input('shipping_state');
-            $order->billing_city = $request->input('shipping_city');
+            // $order->billing_state = $request->input('shipping_state');
+            // $order->billing_city = $request->input('shipping_city');
             $order->billing_address = $request->input('shipping_address');
             $order->billing_phone = $request->input('shipping_phone');
-            $order->billing_zipcode = $request->input('shipping_zipcode');
+            // $order->billing_zipcode = $request->input('shipping_zipcode');
         }else {
             $order->billing_fullname = $request->input('billing_fullname');
-            $order->billing_state = $request->input('billing_state');
-            $order->billing_city = $request->input('billing_city');
+            // $order->billing_state = $request->input('billing_state');
+            // $order->billing_city = $request->input('billing_city');
             $order->billing_address = $request->input('billing_address');
             $order->billing_phone = $request->input('billing_phone');
-            $order->billing_zipcode = $request->input('billing_zipcode');
+            // $order->billing_zipcode = $request->input('billing_zipcode');
         }
 
+        $cartItem = \Cart::getContent();
 
+        if (count($cartItem)>0) {
         $order->grant_total = \Cart::getTotal();
         $order->item_count = \Cart::getContent()->count();
 
         $order->user_id = auth()->id();
-
+        $order->product_name=$name;
+        $order->image_path=$image;
         // if (request('payment_method') == 'paypal') {
         //     $order->payment_method = 'paypal';
         // }
-
         $order->save();
-
         $cartItems = \Cart::getContent();
 
         foreach($cartItems as $item) {
             $order->items()->attach($item->id, ['price'=> $item->price, 'quantityy'=> $item->quantity]);
         }
 
-        //$order->generateSubOrders();
-
-        // if (request('payment_method') == 'paypal') {
-
-        //     return redirect()->route('paypal.checkout', $order->id);
-
-        // }
-
         \Cart::clear();
-
-        return redirect()->route('home')->withMessage('Order has been placed');
+        return redirect()->route('home')->with('success', 'Your order placed successfully and order number is:'.$order->order_number);
+    }
+    else{
+        return back()->with('empty-order', 'your cart is empty,please add products to place order');
+        }
 
     }
+
 
     /**
      * Display the specified resource.
@@ -152,6 +160,19 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         //
+    }
+    public function tahnkyou(){
+        return view('thankyou');
+    }
+    function randomString($length = 9) {
+        $str = "";
+        $characters = array_merge(range('A','Z'), range('a','z'), range('0','9'));
+        $max = count($characters) - 1;
+        for ($i = 0; $i < $length; $i++) {
+            $rand = mt_rand(0, $max);
+            $str .= $characters[$rand];
+        }
+        return $str;
     }
 
 }
