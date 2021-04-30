@@ -36,10 +36,13 @@
 <!--Section: Block Content-->
 <section>
     <!--Carousel Wrapper-->
-    <div class="container-fluid">
-                <div class="row mb-5">
-                    @include('mengamenu')
-                    <div class="col-md-8 example">
+
+{{-- <div class="container"> --}}
+    <div class="row">
+        <div class="column mt-1">
+            @include('mengamenu')
+        </div>
+            <div class="col-md-10 mt-4">
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
                                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -74,14 +77,11 @@
                             </a>
                         </div>
                     </div>
-                    </div>
-
-
-                <!--/Carousel Wrapper-->
-
+                </div>
+             <!--/Carousel Wrapper-->
             <!--Section: Block Content-->
 
-                </div>
+</div>
                 @include('product.product_view')
 
                 @include('product.product_category')

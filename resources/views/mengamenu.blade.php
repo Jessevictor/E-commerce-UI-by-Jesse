@@ -4,21 +4,22 @@
     .menu-container {
     width:200%;
     margin: 20 auto;
-    padding: 20px 0;
+    padding: 10px ;
 }
 .menu {
-    width: 325px;
+    margin-top: 100px;
+    width: 189px;
     font-weight: 300;
     font-size: 13px;
     line-height: 12px;
     position: relative;
     padding: 0 0 0 0px;
-    margin: 2%;
+    margin: 0%;
     background-color: rgb(255, 254, 253);
     height: 350px;
 }
 .menu a, .menu a:link, .menu a:visited, .menu a:focus, span {
-    color: grey;
+    color: Black;
     text-decoration: none;
 }
 .menu a:hover {
@@ -48,7 +49,7 @@
     position: absolute;
     list-style: none;
     top: 0px;
-    left: 350px;
+    left: 270px;
     width: 910px;
     min-height: 100%;
     text-align: left;
@@ -96,7 +97,7 @@
 .menu .col ul li a {
     display: block;
     padding: 0 0 15px 0;
-    color: grey;
+    color: black;
 }
 .menu .col ul li a:hover {
     color: orange;
@@ -119,7 +120,7 @@
 <div class="col-sm-3">
     <div>
         <ul class="menu">
-          <li><a href="#"><i class="fa fa-apple">Supermarket</i> </a>
+          <li><a href="#"><i class="fa fa-apple fa-lg"></i><b> Supermarket</b> </a>
             <div class="megadrop">
 
               <div class="col">
@@ -182,7 +183,7 @@
               </div>
             </div>
           </li>
-          <li><a href="#"><i class="fa fa-mobile"> Phones & Tablets</i> </a>
+          <li><a href="#"><i class="fa fa-android fa-lg"></i><b>    Phones & Tablets</b> </a>
             <div class="megadrop">
               <div class="col">
                 <h2>MOBILE PHONES</h2>
@@ -202,7 +203,7 @@
               </div>
             </div>
           </li>
-          <li><a href="#"><i class="fa fa-eye">Fashion</i> </a>
+          <li><a href="#"><i class="fa fa-eye fa-lg"></i><b> Fashion</b></a>
 
             <div class="megadrop">
 
@@ -258,13 +259,12 @@
             </div>
           </li>
 
-
-          {{-- <li><a href="#">MEGA MENU 1</a>
+          <li><a href="#"><i class="fa fa-plug fa-lg"></i><b> Electronics</b></a>
 
             <div class="megadrop">
 
               <div class="col">
-                <h3>Title</h3>
+                <h2>Wome`s Fashion</h2>
                 <hr>
                 <ul>
                   <li><a href="#">Sub-menu 1</a>
@@ -276,7 +276,7 @@
                 </ul>
               </div>
               <div class="col">
-                <h3>Title</h3>
+                <h2>Men`s Fashion</h2>
                 <hr>
                 <ul>
                   <li><a href="#">Sub-menu 1</a>
@@ -288,7 +288,7 @@
                 </ul>
               </div>
               <div class="col">
-                <h3>Title</h3>
+                <h2>Kid`s Fasion</h2>
                 <hr>
                 <ul>
                   <li><a href="#">Sub-menu 1</a>
@@ -300,20 +300,8 @@
                 </ul>
               </div>
 
-               <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
+               <div class="col" style="float: right;">
+                <h2>Baby</h2>
                 <hr>
                 <ul>
                   <li><a href="#">Sub-menu 1</a>
@@ -326,61 +314,48 @@
               </div>
             </div>
           </li>
-          <li><a href="#">MEGA MENU 1</a>
+          <li><a href="#"><i class="fa fa-home fa-lg"></i><b> Home & Office</b></a>
 
             <div class="megadrop">
+              <div class="col">
+                <h2>Wome`s Fashion</h2>
+                <hr>
+                <ul>
+                  <li><a href="#">Sub-menu 1</a>
+                  </li>
+                  <li><a href="#">Sub-menu 2</a>
+                  </li>
+                  <li><a href="#">Sub-menu 3</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <h2>Men`s Fashion</h2>
+                <hr>
+                <ul>
+                  <li><a href="#">Sub-menu 1</a>
+                  </li>
+                  <li><a href="#">Sub-menu 2</a>
+                  </li>
+                  <li><a href="#">Sub-menu 3</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <h2>Kid`s Fasion</h2>
+                <hr>
+                <ul>
+                  <li><a href="#">Sub-menu 1</a>
+                  </li>
+                  <li><a href="#">Sub-menu 2</a>
+                  </li>
+                  <li><a href="#">Sub-menu 3</a>
+                  </li>
+                </ul>
+              </div>
 
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-
-               <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
+               <div class="col" style="float: right;">
+                <h2>Baby</h2>
                 <hr>
                 <ul>
                   <li><a href="#">Sub-menu 1</a>
@@ -393,61 +368,49 @@
               </div>
             </div>
           </li>
-          <li><a href="#">MEGA MENU 1</a>
+
+          <li><a href="#"><i class="fa fa-gamepad fa-lg"></i><b> Gaming</b></a>
 
             <div class="megadrop">
+              <div class="col">
+                <h2>Wome`s Fashion</h2>
+                <hr>
+                <ul>
+                  <li><a href="#">Sub-menu 1</a>
+                  </li>
+                  <li><a href="#">Sub-menu 2</a>
+                  </li>
+                  <li><a href="#">Sub-menu 3</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <h2>Men`s Fashion</h2>
+                <hr>
+                <ul>
+                  <li><a href="#">Sub-menu 1</a>
+                  </li>
+                  <li><a href="#">Sub-menu 2</a>
+                  </li>
+                  <li><a href="#">Sub-menu 3</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <h2>Kid`s Fasion</h2>
+                <hr>
+                <ul>
+                  <li><a href="#">Sub-menu 1</a>
+                  </li>
+                  <li><a href="#">Sub-menu 2</a>
+                  </li>
+                  <li><a href="#">Sub-menu 3</a>
+                  </li>
+                </ul>
+              </div>
 
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-
-               <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
+               <div class="col" style="float: right;">
+                <h2>Baby</h2>
                 <hr>
                 <ul>
                   <li><a href="#">Sub-menu 1</a>
@@ -460,61 +423,49 @@
               </div>
             </div>
           </li>
-          <li><a href="#">MEGA MENU 1</a>
+
+          <li><a href="#"><i class="fa fa-child fa-lg"></i><b> Baby Products</b></a>
 
             <div class="megadrop">
+              <div class="col">
+                <h2>Wome`s Fashion</h2>
+                <hr>
+                <ul>
+                  <li><a href="#">Sub-menu 1</a>
+                  </li>
+                  <li><a href="#">Sub-menu 2</a>
+                  </li>
+                  <li><a href="#">Sub-menu 3</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <h2>Men`s Fashion</h2>
+                <hr>
+                <ul>
+                  <li><a href="#">Sub-menu 1</a>
+                  </li>
+                  <li><a href="#">Sub-menu 2</a>
+                  </li>
+                  <li><a href="#">Sub-menu 3</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <h2>Kid`s Fasion</h2>
+                <hr>
+                <ul>
+                  <li><a href="#">Sub-menu 1</a>
+                  </li>
+                  <li><a href="#">Sub-menu 2</a>
+                  </li>
+                  <li><a href="#">Sub-menu 3</a>
+                  </li>
+                </ul>
+              </div>
 
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-
-               <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
+               <div class="col" style="float: right;">
+                <h2>Baby</h2>
                 <hr>
                 <ul>
                   <li><a href="#">Sub-menu 1</a>
@@ -527,61 +478,48 @@
               </div>
             </div>
           </li>
-          <li><a href="#">MEGA MENU 1</a>
+          <li><a href="#"><i class="fa fa-desktop fa-lg"></i><b> Computing</b></a>
 
             <div class="megadrop">
+              <div class="col">
+                <h2>Wome`s Fashion</h2>
+                <hr>
+                <ul>
+                  <li><a href="#">Sub-menu 1</a>
+                  </li>
+                  <li><a href="#">Sub-menu 2</a>
+                  </li>
+                  <li><a href="#">Sub-menu 3</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <h2>Men`s Fashion</h2>
+                <hr>
+                <ul>
+                  <li><a href="#">Sub-menu 1</a>
+                  </li>
+                  <li><a href="#">Sub-menu 2</a>
+                  </li>
+                  <li><a href="#">Sub-menu 3</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <h2>Kid`s Fasion</h2>
+                <hr>
+                <ul>
+                  <li><a href="#">Sub-menu 1</a>
+                  </li>
+                  <li><a href="#">Sub-menu 2</a>
+                  </li>
+                  <li><a href="#">Sub-menu 3</a>
+                  </li>
+                </ul>
+              </div>
 
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-
-               <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
+               <div class="col" style="float: right;">
+                <h2>Baby</h2>
                 <hr>
                 <ul>
                   <li><a href="#">Sub-menu 1</a>
@@ -594,248 +532,7 @@
               </div>
             </div>
           </li>
-          <li><a href="#">MEGA MENU 1</a>
-
-            <div class="megadrop">
-
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-
-               <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li><a href="#">MEGA MENU 1</a>
-
-            <div class="megadrop">
-
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-
-               <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li><a href="#">MEGA MENU 1</a>
-
-            <div class="megadrop">
-
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-
-               <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li> <a href="#">MEGA MENU 2</a>
-             <div class="megadrop">
-            <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h3>Title</h3>
-                <hr>
-                <ul>
-                  <li><a href="#">Sub-menu 1</a>
-                  </li>
-                  <li><a href="#">Sub-menu 2</a>
-                  </li>
-                  <li><a href="#">Sub-menu 3</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li> --}}
-
+          <li><a href="{{route('shops.login')}}"><i class="fa fa-money fa-lg"></i><b> Sell</b></a></li>
         </ul>
       </div>
 </div>

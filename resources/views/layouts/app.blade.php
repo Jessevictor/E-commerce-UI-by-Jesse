@@ -137,41 +137,50 @@
 
 
 }
+@media screen and (min-width: 600px) {
+  div.btn-group {
+    display: none;
+  }
+}
 </style>
 </head>
 <body>
-                  @if(session()->has('cart'))
-                    <div class="alert alert-success">
-                        {{ session()->get('cart') }}
-                    </div>
-                    @endif
+        @if(session()->has('cart'))
+            <div class="alert alert-success">
+                {{ session()->get('cart') }}
+            </div>
+         @endif
 <nav class="navbar navbar-expand-xl sticky-top navbar-light bg-warning">
 	<a href="/" class="navbar-brand "> <img src="/images/i.png"  width="60px;" height="60px" alt="">Mest<b>alla</b></a>
 	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 		<span class="navbar-toggler-icon"></span>
 	</button>
-    <span>
-    <?php
-    $orders=App\Models\Order::where('user_id',auth()->id())->get();
-    $order=count($orders);
-    ?>
-    <p>Order:{{$order}}</p>
-    </span>
-
 	<!-- Collection of nav links, forms, and other content for toggling -->
 	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-		<div class="navbar-nav">
-		<a href="{{route('create.product')}}" class="nav-item nav-link">Add prodcut</a>
-		</div>
-        <div class="navbar-nav">
-            <a href="{{route('shops.login')}}" class="nav-item nav-link">Sell</a>
-            </div>
+
         <form class="navbar-form form-inline">
             <div class=" search-box " >
                 <input type="text" id="search" class="form-control" style="width:260%" placeholder="Search Product by Name">
             </div>
         </form>
-		<div class="navbar-nav ml-auto">
+             <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Category
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#"><i class="fa fa-apple fa-lg"></i>Supermarket</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-android fa-lg"></i>Phone & Tablet</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-eye fa-lg"></i>Fashion</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-plug fa-lg"></i>Electronics</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-home fa-lg"></i>Home & Office</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-gamepad fa-lg"></i>Gaming</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-child fa-lg"></i>Baby Products</a>
+              <a class="dropdown-item" href="#"><i class="fa fa-desktop fa-lg"></i>Computing</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{{route('shops.login')}}" ><i class="fa fa-money fa-lg"></i>sell</a>
+            </div>
+          </div>
+		 <div class="navbar-nav ml-auto">
 			<a href="{{route('pay.create')}}" class="nav-item nav-link notifications"><i class="fa fa-cart-arrow-down" style="font-size: 2em;"></i><span class="badge">{{\Cart::getContent()->count()}}</span></a>
 			<div class="nav-item dropdown">
                                 <!-- Authentication Links -->
@@ -190,7 +199,13 @@
                             @else
 				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://www.shareicon.net/data/512x512/2016/07/26/802043_man_512x512.png" class="avatar" alt="Avatar"> {{ Auth::user()->name }} <b class="caret"></b></a>
 				<div class="dropdown-menu">
-					<a href="#" class="dropdown-item"><i class="fa fa-user-o"></i>Oders:10</a></a>
+					   <span>
+                        <?php
+                        $orders=App\Models\Order::where('user_id',auth()->id())->get();
+                        $order=count($orders);
+                        ?>
+                        <a href="#" class="dropdown-item"><i class="fa fa-user-o"><p>Order:{{$order}}</p></i>
+                        </a></a></span>
 					{{-- <a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></a>
 					<a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></a> --}}
 					<div class="dropdown-divider"></div>
