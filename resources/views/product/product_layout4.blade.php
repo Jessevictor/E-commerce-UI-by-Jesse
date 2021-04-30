@@ -12,6 +12,9 @@
     width: 50%;
   }
 }
+.card-body{
+    border-radius: 8px !important;
+}
 </style>
 {{-- Third lane --}}
 <div class="row mb-5">

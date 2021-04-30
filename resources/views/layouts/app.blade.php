@@ -51,7 +51,7 @@ body {
 .search-box input {
 	box-shadow: none;
 	padding-right: 100px;
-	border-radius: 9px !important;
+	border-radius: 6px !important;
 }
 .search-box .input-group-addon {
 	min-width: 35px;
@@ -59,8 +59,8 @@ body {
 	background: transparent;
 	position: absolute;
 	right: 0;
-	z-index: 9;
-	padding: 7px;
+	z-index: 4;
+	padding: 6px;
 	height: 100%;
 }
 .search-box i {
