@@ -1,139 +1,176 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<style>
-    .slider-item{
-    border: 1px solid #E1E1E1;
-    border-radius: 5px;
-    background: #FFF;
-}
-.slider-item .slider-image img{
-    margin: 0 auto;
-    width: 100%;
-}
-.slider-item .slider-main-detail{
-    padding: 10px;
-    border-radius: 0 0 5px 5px;
-}
-.slider-item:hover .slider-main-detail{
-    background-color: #dbeeee !important;
-}
-.slider-item .price{
-    float: left;
-    margin-top: 5px;
-}
-.slider-item .price h5{
-    line-height: 20px;
-    margin: 0;
-}
-.detail-price{
-    color: #219FD1;
-}
-.slider-item .slider-main-detail .rating{
-    color: #777;
-}
-.slider-item .rating{
-    float: left;
-    font-size: 17px;
-    text-align: right;
-    line-height: 52px;
-    margin-bottom: 10px;
-    height: 52px;
-}
-.slider-item .btn-add{
-    width: 50%;
-    float: left;
-    border-right: 1px solid #E1E1E1;
-}
-.slider-item .btn-details{
-    width: 50%;
-    float: left;
-}
-.controls{
-    margin-top: 20px;
-}
-.btn-info,.btn-info:visited,.btn-info:hover{
-	background-color: #21BBD8;
-	border-color: #21BBD8;
-}
-.btn-info{
-	margin-left:5px;
-}
-.slider-main-detail:hover{
-	background-color: #dbeeee !important;
-}
-.AddCart{
-	margin: 0px;
-	padding:5px;
-	border-radius:2px;
-	margin-right:10px;
-}
-.review {
-	margin-bottom: 5px;
-	padding-top:5px;
-}
-</style>
-<body>
+<script>
+    $('#carouselExample').on('slide.bs.carousel', function (e) {
 
-        <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel" data-type="multi">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="row">
-                        @foreach ($data as $item)
-                        <div class="col-md-3 col-sm-3 col-xs-12">
+var $e = $(e.relatedTarget);
+var idx = $e.index();
+var itemsPerSlide = 4;
+var totalItems = $('.carousel-item').length;
 
-                            <div class="slider-item">
-                                <div class="slider-image">
-                                    <img src="https://dummyimage.com/250x200/#cccccc/1f1b1f.png" class="img-responsive" alt="a" />
-                                </div>
-                                <div class="slider-main-detail">
-                                    <div class="slider-detail">
-                                        <div class="product-detail">
-                                            <h5>Product Name</h5>
-                                            <h5 class="detail-price">$187.87</h5>
-                                        </div>
-                                    </div>
-                                    <div class="cart-section">
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-12 col-xs-6 review">
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12 col-xs-6">
-                                                <a href="#" class="AddCart btn btn-info"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
+if (idx >= totalItems-(itemsPerSlide-1)) {
+    var it = itemsPerSlide - (totalItems - idx);
+    for (var i=0; i<it; i++) {
+        // append slides to end
+        if (e.direction=="left") {
+            $('.carousel-item').eq(i).appendTo('.carousel-inner');
+        }
+        else {
+            $('.carousel-item').eq(0).appendTo('.carousel-inner');
+        }
+    }
+}
+});
+
+</script>
+<div class="row mb-5">
+    <div class="col-md-12">
+        <div class="card-1">
+            <div class="card-header" style="background-color:rgb(225, 223, 223);">
+                <div class="row mb-0">
+                    <div class="col-md-11">
+                        <h5>Similar Products</h5>
+                    </div>
+                <div class="float-right">
+                    <h6>See More ></h6>
                 </div>
             </div>
         </div>
-</div>
-<div class="row">
-    <div class="col-md-6 col-sm-6 col-xs-12">
-        <h3>Product Slider</h3>
-    </div>
-    <div class="col-md-6 col-sm-6 col-xs-6 hidden-xs">
-        <div class="controls pull-right">
-            <a class="left fa fa-chevron-left btn btn-info " href="#carousel-example" data-slide="prev"></a>
-            <a class="right fa fa-chevron-right btn btn-info" href="#carousel-example" data-slide="next"></a>
+<div class="card-body">
+<div class="container-fluid">
+    <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+        <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-md-3 active">
+                <div class="card">
+                    <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
+                </div>
+             </div>
+            <div class="carousel-item col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
+                </div>            </div>
+            <div class="carousel-item col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
+                </div>            </div>
+            <div class="carousel-item col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
+                </div>            </div>
+            <div class="carousel-item col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
+                </div>            </div>
+            <div class="carousel-item col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
+                </div>            </div>
+            <div class="carousel-item col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
+                </div>            </div>
+            <div class="carousel-item col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/68/971813/1.jpg?6713" alt="" />
+                    <p class="h6"><small class="text-muted"><b>Lorem, ipsum dolor</b></small></p>
+                    <p class="h5 m-1">Ksh 782.00</p>
+                </div>            </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left fa-lg text-muted"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+            <i class="fa fa-chevron-right fa-lg text-muted"></i>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 </div>
-</body>
-</html>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @media (min-width: 768px) {
+
+/* show 3 items */
+.carousel-inner .active,
+.carousel-inner .active + .carousel-item,
+.carousel-inner .active + .carousel-item + .carousel-item,
+.carousel-inner .active + .carousel-item + .carousel-item + .carousel-item  {
+    display: block;
+}
+
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+    transition: none;
+}
+
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  position: relative;
+  transform: translate3d(0, 0, 0);
+}
+
+.carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -25%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+}
+
+/* left or forward direction */
+.active.carousel-item-left + .carousel-item-next.carousel-item-left,
+.carousel-item-next.carousel-item-left + .carousel-item,
+.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+}
+
+/* farthest right hidden item must be abso position for animations */
+.carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+}
+
+/* right or prev direction */
+.active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+.carousel-item-prev.carousel-item-right + .carousel-item,
+.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+}
+
+}
+
+
+</style>
