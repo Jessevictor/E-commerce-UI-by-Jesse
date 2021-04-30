@@ -136,7 +136,7 @@
                                 <!-- title -->
                             </div>
                             <div class="table-responsive">
-                                <table class="table v-middle">
+                                <table id="tablet" class="table v-middle">
                                     <thead>
                                         <tr class="bg-light">
                                             <th class="border-top-0">Products</th>
@@ -161,7 +161,7 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td><img src="/images/{{$item->image_path}}" width="60px" height="60px"alt=""></td>
+                                            <td><img src="/public/img/{{$item->image_path}}" width="60px" height="60px"alt=""></td>
                                             <td>{{$item->item_count}}</td>
                                             <td>
                                                 <label class="label label-danger">{{$item->price}}</label>
@@ -274,4 +274,9 @@
         <!-- /#page-content-wrapper -->
 
     </div>
+    <script>
+        $(document).ready(function() {
+        $('#tablet').DataTable();
+        } );
+    </script>
     <!-- /#wrapper -->

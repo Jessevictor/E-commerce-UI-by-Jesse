@@ -1,14 +1,9 @@
 @include('Backend.Shops.navbar')
+@include('Backend.Admin.datatables')
         <!-- Begin Page Content -->
         <div class="container-fluid px-lg-4">
         <div class="row">
           <div class="col-md-12 mt-lg-4 mt-4">
-          <!-- Page Heading -->
-          {{-- <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800"></h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>
-			Generate Report</a>
-          </div> --}}
 		</div>
                     <div class="col-md-12">
                         <div class="row">
@@ -41,7 +36,7 @@
                                 </div>
                             </div>
                             <div class="table-responsive">
-                                <table class="table v-middle">
+                                <table id="tables" class="table v-middle">
                                     <thead>
                                         <tr class="bg-light">
                                             <th class="border-top-0">Products</th>
@@ -64,7 +59,7 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td><img src="https://www.phonesarena.co.ke/wp-content/uploads/2019/07/Samsung-Galaxy-A10.png"width="30px" height="30px" alt=""></td>
+                                            <td><img src="/public/img/{{$item->image_path}}"width="30px" height="30px" alt=""></td>
                                             <td>{{$item->grant_total}}</td>
                                             <td>
                                                 <label class="label label-danger">{{$item->item_count}}</label>
@@ -92,3 +87,12 @@
         </div>
 		</div>
         <!-- /#page-content-wrapper -->
+
+    </div>
+    <script>
+        $(document).ready(function() {
+        $('#tables').DataTable();
+        } );
+    </script>
+
+    <!-- /#wrapper -->
