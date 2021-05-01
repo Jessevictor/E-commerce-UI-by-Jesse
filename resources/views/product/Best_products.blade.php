@@ -41,9 +41,9 @@
                     <div class="card">
                         <a href="{{route('product.show',$item->id)}}"><img class="card-img-top" src="/images/{{$item->image_path}}" alt="" />
                         </a>
-                        <p class="h6"><small class="text-muted"><b  style="color: black;">Butterflies Hand composite</b></small></p>
+                        <p class="h6"><small class="text-muted"><b  style="color: black; Font-size:0.8vw">Butterflies Hand composite</b></small></p>
                         <p class="h5 m-1">Ksh782.00</p>
-                        <p class="h5 " style="font-size: 17px; color:grey;"><s>Ksh782.00</s></p>
+                        <p class="h5 " style="font-size: 0.6vw; color:grey;"><s>Ksh782.00</s></p>
                     </div>
                 </div>
                    @endforeach

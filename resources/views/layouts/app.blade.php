@@ -95,7 +95,7 @@
 }
 .navbar .badge {
 	color: #fff;
-	background: #ec2213;
+	background: #fae2e1;
 	font-size: 11px;
 	border-radius: 20px;
 	position: absolute;
@@ -150,7 +150,7 @@
                 {{ session()->get('cart') }}
             </div>
          @endif
-<nav class="navbar navbar-expand-xl sticky-top navbar-light bg-warning">
+<nav class="navbar navbar-expand-xl sticky-top navbar-light" style="background-color:orange;">
 	<a href="/" class="navbar-brand "> <img src="/images/i.png"  width="60px;" height="60px" alt="">Mest<b>alla</b></a>
 	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 		<span class="navbar-toggler-icon"></span>

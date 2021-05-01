@@ -20,7 +20,7 @@
 </style>
 <body>
 
-<div class="row mb-4">
+{{-- <div class="row mb-4">
     <div class="col-md-8">
         <a href='https://pngtree.com/so/ramadan-kareem'></a>
     </div>
@@ -30,8 +30,7 @@
     </div>
     <div class="col-md-2">
     </div>
-</div>
-<br>
+</div> --}}
 @include('layouts.app')
 <!--Section: Block Content-->
 <section>
@@ -82,6 +81,7 @@
             <!--Section: Block Content-->
 
 </div>
+<br><br><br>
                 @include('product.product_view')
 
                 @include('product.product_category')
@@ -90,7 +90,11 @@
                 <br>
                 <br>
                 @include('product.Product_layout1')
+                @include('product.Product_layout3')
+                <br><br>
                 @include('product.Product_layout2')
+
+                @include('product.floatingicon')
 
                 {{-- @include('product.Details_view') --}}
                 <br>

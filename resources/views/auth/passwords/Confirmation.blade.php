@@ -150,7 +150,7 @@
                 {{ session()->get('cart') }}
             </div>
          @endif
-<nav class="navbar navbar-expand-xl sticky-top navbar-light " style="background-color: orange;">
+<nav class="navbar navbar-expand-xl sticky-top navbar-light bg-warning">
 	<a href="/" class="navbar-brand "> <img src="/images/i.png"  width="60px;" height="60px" alt="">Mest<b>alla</b></a>
 	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 		<span class="navbar-toggler-icon"></span>
